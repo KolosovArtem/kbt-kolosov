@@ -1,0 +1,3 @@
+lublupython="lublupython"
+dictionary={i:lublupython.count(i) for i in lublupython if lublupython.count(i) > 0}
+print(dictionary)
