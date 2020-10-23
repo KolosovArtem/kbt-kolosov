@@ -1,0 +1,18 @@
+# 1 ЗАДАНИЕ
+text_handler = open(r"E:test_text.txt")
+print(text_handler.read())
+
+
+# 2 ЗАДАНИЕ
+import random
+ran = [int(random.random()*10000) for i in range(10000)]
+with open(r"E:random_text.txt", 'w') as file_handler:
+    for item in ran:
+        file_handler.write("{}\n".format(item))
+        
+#text_handler = open(r"E:random_text.txt")
+#print(text_handler.read())
+
+
+# 3 ЗАДАНИЕ
+
