@@ -1,0 +1,9 @@
+import random
+ran = [int(random.random()*10000) for i in range(10000)]
+max = ran[0]
+max_count = ran.count(max)
+for ii in ran:
+    if ran.count(ii)>max_count:
+        max=ii
+        max_count = ran.count(ii)
+print(max)
