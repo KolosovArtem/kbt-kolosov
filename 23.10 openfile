@@ -16,3 +16,19 @@ with open(r"E:random_text.txt", 'w') as file_handler:
 
 # 3 ЗАДАНИЕ
 
+import random
+ran = [int(random.random()*10000) for i in range(10000)]
+with open(r"E:random_text.txt", 'w') as file_handler:
+    for item in ran:
+        file_handler.write("{}\n".format(item))
+file_handler.close()
+word = "58"
+outfile = open(r"E:test_text.txt", 'w+')
+with open(r"E:random_text.txt", 'r+') as search:
+    for line in search:
+            line = line.rstrip()
+            if word == line:
+                print(line)
+                outfile.write(line)
+search.close()
+outfile.close()
