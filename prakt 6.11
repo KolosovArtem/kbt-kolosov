@@ -1,0 +1,15 @@
+first_number = int(input("Введите первое число: "))
+second_number = int(input("Введите второе число: "))
+t_1 = 0
+t_2 = 0
+for i in range (first_number,second_number+1):
+    if i%3 == 0:
+        t_1 += i
+        t_2 += 1
+    i+=1
+else:
+    print("Число/Числа не подходят")
+answer = t_1/t_2
+test = t_1-i
+print("Чисел, делящихся на 3: ", t_2)
+print("Среднее арифметическое: ",answer)
