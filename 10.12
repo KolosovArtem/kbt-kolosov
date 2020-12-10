@@ -19,10 +19,54 @@ data = [
     ['Пожимаю плечами', 1.74, 0.11, 0.0],
     ['Огонь', 4.5, 2.49, 150.0],
     ['Переработка', 0.0333, 0.056, 932.0]
-    
 ]
 
-for tabl in data:
-    test = round(tabl[3]/tabl[2])
-    print('{: <16} | {: >10.2f}'.format(tabl[0],test))
+emojixpress_sr = 0
+instagram_sr = 0
+twitter_sr = 0
 
+
+data.sort(key=lambda row: row[1], reverse=True)
+for i in range(len(data)):
+    test = data[i][1]
+    data[i].append(test)
+    #Средние значения
+for row in data:
+    emojixpress_sr += row[1]
+    instagram_sr += row[2]
+    twitter_sr += row[3]
+emojixpress_sr1 = emojixpress_sr / len(data[1])
+instagram_sr1 = instagram_sr / len(data[2])
+twitter_sr1 = twitter_sr / len(data[3])
+print('Emojixpress      | Instagram      |     Twotter')
+print('{: ^16.0f} | {: ^14.0f} | {: ^12.0f}'.format(
+    emojixpress_sr1, instagram_sr1, twitter_sr1))
+    #Деление на среднее значение
+for row in data:
+    emojixpress_t = (row[1]/emojixpress_sr1)
+    instagram_t = (row[2]/instagram_sr1)
+    twitter_t = (row[3]/twitter_sr1)
+print()
+
+print('Название эмодзи  |        Emojixpress')
+print('______________________________')
+for row in data[:5]:
+    print('{: <16} | {: >10.5f}'.format(row[0], emojixpress_t))
+    
+print()
+    
+print('Название эмодзи  |        Instagram')
+print('______________________________')
+for row in data[:5]:
+    print('{: <16} | {: >10.5f}'.format(row[0], instagram_t))
+    
+print()
+    
+print('Название эмодзи  |        Twitter')
+print('______________________________')
+for row in data[:5]:
+    print('{: <16} | {: >10.5f}'.format(row[0], twitter_t))
+
+#    print('{: <16} | {: >10.2f}'.format(row[0],emojixpress_t))
+#    print('{: <16} | {: >10.2f}'.format(row[0],instagram_t))
+#    print('{: <16} | {: >10.2f}'.format(row[0],twitter_t))
