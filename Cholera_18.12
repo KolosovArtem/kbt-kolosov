@@ -1,21 +1,4 @@
 import pandas as pd
-"""
-df = pd.read_csv (r'E:\exoplanet.csv')   #read the csv file (put 'r' before the path string to address any special characters in the path, such as '\'). Don't forget to put the file name at the end of the path + ".csv"
-print (df)
-mass = df.loc[:,[' name','\tmass']]
-#print(mass)
-year = df.loc[:,['\tdiscovered']]
-#print(year)
-current_year = df.loc[df.loc[:,'\tdiscovered'] == 2010]['\tdiscovered'].count()
-current_name = df.loc[df.loc[:,'#'] == '0']['#'].count()
-current_mass = mass.loc[mass.loc[:,'\tmass'] == '14.0000']['\tmass'].count()
-print(current_year)
-
-
-cfr = df.loc[:,['case_fatality_rate']]
-values = cfr.loc[cfr.loc[:,'case_fatality_rate'] > 1.0]['case_fatality_rate'].count()
-print(values)
-"""
 df = pd.read_csv (r'E:\cholera.csv')
 print('Размеры: ',df) #Первое задание
 print('________________________________')
@@ -35,7 +18,12 @@ lethal_cases = df.loc[df.loc[:, 'deaths'] > 50]['deaths'].count() #Пятое з
 print('Летальных исходов: ',lethal_cases)
 print('________________________________')
 asia_count = df.loc[df.loc[:,'region'] == 'Азия']['region'].count() #Шестое задание. Счёт азиатских стран
-print('Сколько всего азиатских стран: ',asia_count)                    
-#non_asia_count = df.loc[df.loc[:,'region'] == 'Америка', 'Африка', 'Европа', 'Океания']['region'].count()
-#print(non_asia_count)
-#non_asisa_count_test = df.loc[:, ['']]
+print('Сколько всего азиатских стран: ',asia_count)      
+print('________________________________')              
+non_asia_count = df.loc[df.loc[:,'region'] != 'Азия']['region'].count() #Счет стран Не-Азии
+print('Страны, кроме Азии: ',non_asia_count)
+print('________________________________') 
+if asia_count > non_asia_count:
+    print("Стран Азии больше")
+else:
+    print("Стран Не-Азии больше")
