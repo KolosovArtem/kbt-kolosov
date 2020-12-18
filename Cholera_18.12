@@ -34,8 +34,8 @@ print('________________________________')
 lethal_cases = df.loc[df.loc[:, 'deaths'] > 50]['deaths'].count() #Пятое задание
 print('Летальных исходов: ',lethal_cases)
 print('________________________________')
-asia_count = df.loc[df.loc[:,'region'] == 'Азия']['region'].count() #Счёт азиатских стран
+asia_count = df.loc[df.loc[:,'region'] == 'Азия']['region'].count() #Шестое задание. Счёт азиатских стран
 print('Сколько всего азиатских стран: ',asia_count)                    
 #non_asia_count = df.loc[df.loc[:,'region'] == 'Америка', 'Африка', 'Европа', 'Океания']['region'].count()
 #print(non_asia_count)
-non_asisa_count_test = df.loc[:, ['']]
+#non_asisa_count_test = df.loc[:, ['']]
