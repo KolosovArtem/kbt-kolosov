@@ -1,0 +1,50 @@
+import string
+
+class Alphabet:
+    
+    def __init__(self, language, letters):
+        self.language = language
+        self.letters = list(letters)
+
+    def print(self):    #letters of alphabet
+        print(self.letters)
+
+    def letters_num(self):  #number of letters in alphabet
+        len(self.letters)
+        
+print('________________________________')
+
+class EngAlphabet(Alphabet):
+
+    __letters_num = 26
+
+    def __init__(self):
+        super().__init__('En', string.ascii_uppercase)
+
+    def is_en_letter(self, letter):     #checking eng alph
+        if letter.upper() in self.letters:
+            return True
+        return False
+
+    def letters_num(self):      #return
+        return EngAlphabet.__letters_num
+
+    @staticmethod
+    def example():      #example
+        print("Example:")
+        print("This is testing message of my test code.")
+
+print('________________________________')
+
+if __name__ == '__main__':      
+    eng_alphabet = EngAlphabet()    #engalph
+    
+    eng_alphabet.print()        #print lett
+    
+    print(eng_alphabet.letters_num())   #num of lett
+    
+    print(eng_alphabet.is_en_letter('F'))       #checking F
+    
+    print(eng_alphabet.is_en_letter('Щ'))       #checking Щ
+    
+    EngAlphabet.example()       #example
