@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Таблица</title>
+		<link rel="stylesheet" type="text/css" href="1.css">
+</head>
+<body>
+<table border="2px">
+		<tr id="tr_1">
+			<th>ячейка 1</th>
+			<th>ячейка 2</th>
+			<th>ячейка 3</th>
+		</tr>
+	<tr id="tr_2">
+		<td>ячейка 4</td>
+		<td>ячейка 5</td>
+		<td>ячейка 6</td>
+	</tr>
+		<tr id="tr_3">
+		<td>ячейка 7</td>
+		<td>ячейка 8</td>
+		<td>ячейка 9</td>
+	</tr>
+</table>
+</body>
+</html>
+
+
+_________________________________________
