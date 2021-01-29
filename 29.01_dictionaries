@@ -1,0 +1,24 @@
+Test_Dictionary = {
+  "name": "Kelly",
+  "age":25,
+  "salary": 8000,
+  "city": "New york"
+}
+Test_Dictionary['location'] = Test_Dictionary.pop('city')
+print(Test_Dictionary)
+
+Dict_Salary = {
+     'emp1': {'name': 'Jhon', 'salary': 7500},
+     'emp2': {'name': 'Emma', 'salary': 8000},
+     'emp3': {'name': 'Brad', 'salary': 6500}
+}
+Dict_Salary['emp3']['salary'] = 2000
+print(Dict_Salary)
+
+Min_Dict = {
+  'Physics': 82,
+  'Math': 65,   
+  'history': 75
+}
+print(min(Min_Dict, key=Min_Dict.get))
+print(max(Min_Dict, key=Min_Dict.get))
